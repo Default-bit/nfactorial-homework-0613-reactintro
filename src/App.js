@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import { format } from 'date-fns';
+import logo from './img/logo.png'; 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+      <div className='header'>
+        <div className='header2'>
+          <img id='logo' src={logo} alt="logo of fb" />
+          <input id='input' type="text" />
+        </div>
+        
+        <div className='date'>
+          {format(new Date(), `dd.MM.yyyy hh:mm`)}
+        </div>
+      </div>
+      <div className='row'>
+
+        <div className='text1'>Hey</div>
+  
+        <div className='text2'>Let`s</div>
+    
+        <div className='text3'>Give</div>
+
+        <div className='text4'>All</div>
+
+        <div className='text5'>You Can</div>
+
     </div>
+
+    </>
+
   );
 }
 
